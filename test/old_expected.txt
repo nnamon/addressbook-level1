@@ -275,9 +275,6 @@
 || 
 || 0 persons found!
 || ===================================================
-|| Enter command: || [Command entered:  add Valid Name p/12345 e/test@email.com]
-|| New person added: Valid Name, Phone: 12345, Email: test@email.com
-|| ===================================================
 || Enter command: || [Command entered:  exit]
 || Exiting Address Book... Good bye!
 || ===================================================
