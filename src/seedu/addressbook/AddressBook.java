@@ -167,6 +167,13 @@ public class AddressBook {
      * text file will be processed.
      */
     private static final Scanner SCANNER = new Scanner(System.in);
+    
+    /**
+     * Constants to denote the value semantics for specific number of arguments passed.
+     */
+    private static final int ARGC_INVALID_ARGS = 2;
+    private static final int ARGC_SPECIFIED_FILE = 1;
+    private static final int ARGC_UNSPECIFIED_FILE = 0;
 
     /*
      * NOTE : =============================================================================================
@@ -257,16 +264,16 @@ public class AddressBook {
      * @param args full program arguments passed to application main method
      */
     private static void processProgramArgs(String[] args) {
-        if (args.length >= 2) {
+        if (args.length >= ARGC_INVALID_ARGS) {
             showToUser(MESSAGE_INVALID_PROGRAM_ARGS);
             exitProgram();
         }
 
-        if (args.length == 1) {
+        if (args.length == ARGC_SPECIFIED_FILE) {
             setupGivenFileForStorage(args[0]);
         }
 
-        if(args.length == 0) {
+        if(args.length == ARGC_UNSPECIFIED_FILE) {
             setupDefaultFileForStorage();
         }
     }
